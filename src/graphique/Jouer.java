@@ -106,6 +106,10 @@ public class Jouer {
         nameUser = nom;
     }
 
+    /*
+     * ajoute des actions dans les bouttons et les chanmps de texte
+     * ajoute les composants dans le panel
+     */
     public void AjouterContenu() {
 
         quitter.addActionListener(paramQuitter);
@@ -128,10 +132,17 @@ public class Jouer {
 
     }
 
+    /*
+     * affiche l'ensemble de la fenetre  jouerFenetre
+     */
     public void AfficherFenetre() {
         jouerFenetre.setVisible(true);
     }
 
+    /*
+     * ferme la fenetre jouerFenetre
+     * @return un ActionListener
+     */
     public ActionListener quitter() {
 
         ActionListener quitter = new ActionListener() {
@@ -144,6 +155,9 @@ public class Jouer {
 
     }
     
+    /*
+     * Modifie la mention selon le score
+     */
     public void mention(){
         float mention = (Integer.parseInt(champTexteScore.getText()) / 3) / compteur;
                         if (mention < 0.45) {
@@ -162,6 +176,10 @@ public class Jouer {
                         }
     }
 
+    /*
+     * Permet au joueur de saisir sa reponse dans un champ de texte
+     * @return un ActionListener
+     */
     public ActionListener repondre() {
 
         ++compteur;
@@ -210,6 +228,9 @@ public class Jouer {
         return reponse;
     }
 
+    /*
+     * Affiche les equations.
+     */
     public void afficherQuestion() {
 
         if (level == JeuArithmetique.getExtreme()) {
@@ -251,6 +272,9 @@ public class Jouer {
 
     }
 
+    /*
+     * Lance le jeu selon le degre de difficulte saisie
+     */
     public void jouer() {
 
         switch (level) {
@@ -276,6 +300,7 @@ public class Jouer {
 
     }
 
+    
     public int nombreOperateur() {
         Random rand = new Random();
         return rand.nextInt(NBRE_OPERATEUR_MAX - NBRE_OPERATEUR_MIN + 1)

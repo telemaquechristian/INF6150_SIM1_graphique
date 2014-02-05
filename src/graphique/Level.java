@@ -69,7 +69,10 @@ public class Level {
     }
 
     
-
+     /*
+     * ajoute des actions dans les bouttons 
+     * ajoute les composants dans le panel
+     */
     public void AjouterContenu() {
 
         facile.addActionListener(paramFacile);
@@ -86,10 +89,17 @@ public class Level {
 
     }
 
+    /*
+     * affiche l'ensemble de la fenetre  levelFenetre
+     */
     public void AfficherFenetre() {
         levelFenetre.setVisible(true);
     }
 
+    /*
+     * Lance le jeu avec le degre de difficulte facile
+     * @return un ActionListener
+     */
     public ActionListener facile() {
         final Jouer jouer = new Jouer(1);
 
@@ -108,6 +118,10 @@ public class Level {
 
     }
 
+    /*
+     * Lance le jeu avec le degre de difficulte moyen
+     * @return un ActionListener
+     */
     public ActionListener moyen() {
 
         final Jouer jouer = new Jouer(3);
@@ -127,6 +141,10 @@ public class Level {
 
     }
 
+    /*
+     * Lance le jeu avec le degre de difficulte difficile
+     * @return un ActionListener
+     */
     public ActionListener difficile() {
 
         final Jouer jouer = new Jouer(4);
@@ -146,6 +164,10 @@ public class Level {
 
     }
 
+    /*
+     * Lance le jeu avec le degre de difficulte extreme
+     * @return un ActionListener
+     */
     public ActionListener extreme() {
 
         final Jouer jouer = new Jouer(5);

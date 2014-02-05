@@ -74,6 +74,10 @@ public class Jeu {
 
     }
 
+    /*
+     * ajoute des actions dans les bouttons
+     * ajoute les composants dans le panel
+     */
     public void AjouterContenu() {
 
         quitter.addActionListener(paramQuitter);
@@ -91,10 +95,17 @@ public class Jeu {
 
     }
 
+    /*
+     * affiche l'ensemble de la fenetre  jeuFenetre
+     */
     public void AfficherFenetre() {
         jeuFenetre.setVisible(true);
     }
 
+    /*
+     * ferme la fenetre jeuFenetre
+     * @return un ActionListener
+     */
     public ActionListener quitter() {
 
         ActionListener quitter = new ActionListener() {
@@ -107,9 +118,11 @@ public class Jeu {
 
     }
 
-    public ActionListener demarrer() {
-
-        
+    /*
+     * Ouvre une nouvelle fenetre qui contient les nveau du jeu
+     * @return un ActionListener
+     */
+    public ActionListener demarrer() { 
 
         ActionListener demarer = new ActionListener() {
             public void actionPerformed(ActionEvent evenement) {
